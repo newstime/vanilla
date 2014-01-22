@@ -2,17 +2,9 @@
 <div class="row">
   <div class="col">
     <div class="sections-nav text-center">
-      <a href="current">Main</a>
-      •
-      <a href="business">Business</a>
-      •
-      <a href="sports">Sports</a>
-      •
-      <a href="comics">Comics</a>
-      •
-      <a href="bay_area">Bay Area</a>
-      •
-      <a href="world">World/Nation</a>
+      <% sections.each do |section| %>
+        <span><%= link_to section.name, section.path %></span>
+      <% end %>
     </div>
   </div>
 </div>

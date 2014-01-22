@@ -21,6 +21,18 @@
 @import 'variables';
 @import 'grid/config';
 
+.sections-nav {
+  span {
+    &:after {
+      content: ' \2022';
+    }
+    &:last-child:after {
+      content: '' !important;
+    }
+  }
+}
+
+
 .gray-box {
   position: relative;
   /*background-color: #ddd;*/
