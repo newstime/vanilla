@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title><%= title %></title>
-  <%= composer_stylesheet if composing? -%>
-  <%= stylesheet_link_tag "stylesheets/application" %>
-</head>
-<body ng-app="app">
+<% render_layout 'layout' do %>
   <div class="page" id="cover" style="top: 0px;">
     <div class="grid grid24">
       <%= render 'section_nav' %>
@@ -13,8 +6,4 @@
       <%= yield %>
     </div>
   </div>
-  <%#= render 'grid_overlay' %>
-  <%= composer_javascript if composing? -%>
-  <%= javascript_include_tag "javascripts/application" %>
-</body>
-</html>
+<% end %>
