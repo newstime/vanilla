@@ -4,7 +4,6 @@ app.directive "slideinNav", [ '$window', '$document', ( $window, $document ) ->
   {
     restrict: "A"
     controller: 'slideinNavController'
-    templateUrl: 'slidein_nav.html'
     scope:
       src: "@"
 

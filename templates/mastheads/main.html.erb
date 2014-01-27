@@ -15,7 +15,6 @@
         <p class="volume pull-left"><%= edition.volume_label %></p>
         <p class="price pull-right"><%= edition.fmt_price %></p>
         <p class="publish-date"><%= edition.publish_date.strftime("%A, %B %d, %Y") %></p>
-
       </div>
     </div>
 
@@ -23,10 +22,10 @@
     <div slidein-nav="true" class="ng-isolate-scope ng-scope slidein-nav" style="display: none; top: -48px;">
       <div class="mini-mast">
         <h1 class="sfrecord">
-          <a href="#">San Francisco Record</a>
+          <a href="#"><%= render 'logo' -%></a>
         </h1>
         <div class="buy-or-subscribe">
-          <a href="/newstand">Buy or Subscribe</a>
+          <%= link_to "Buy or Subscribe", edition.store_link %>
         </div>
       </div>
     </div>
