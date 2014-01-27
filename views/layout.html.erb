@@ -6,7 +6,7 @@
   <%= stylesheet_link_tag "stylesheets/application" %>
 </head>
 <body ng-app="app">
-  <%= render(template_name) { yield } %>
+  <%= yield %>
   <%#= render 'grid_overlay' %>
   <%= composer_javascript if composing? -%>
   <%= javascript_include_tag "javascripts/application" %>
