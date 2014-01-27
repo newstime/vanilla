@@ -1,9 +1,8 @@
-<% render_layout 'layout' do %>
-  <div class="page" id="cover" style="top: 0px;">
-    <div class="grid grid24">
-      <%= render 'section_nav' %>
-      <%= render 'mastheads/main' %>
-      <%= yield %>
-    </div>
+<% yield_to 'layout' -%>
+<div class="page" id="cover" style="top: 0px;">
+  <div class="grid grid24">
+    <%= render 'section_nav' %>
+    <%= render 'mastheads/main' %>
+    <%= yield %>
   </div>
-<% end %>
+</div>
