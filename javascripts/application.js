@@ -20,7 +20,6 @@
 //= require_tree ./controllers
 //= require_tree ./directives
 //
-//= require lib/angularjs_fittext
 //= require lib/jquery.easing
 
 app = angular.module("app", ["templates"])
