@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title><%= edition.title %></title>
+<title><%= title rescue edition.title %></title>
   <%= composer_stylesheet if composing? -%>
   <%= stylesheet_link_tag "stylesheets/application" %>
 </head>
