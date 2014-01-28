@@ -28,15 +28,16 @@ try {
   angular.module("app", ["templates"]); // Otherwise create it.
 }
 
-$(document).keypress(function(event) {
-  // Map t to toggle grid.
-  if (event.which == 116) {
-    $('.grid-overlay').toggle();
-    event.preventDefault();
-  }
-});
+// Disabling the grid for now...
+//$(document).keypress(function(event) {
+  //// Map t to toggle grid.
+  //if (event.which == 116) {
+    //$('.grid-overlay').toggle();
+    //event.preventDefault();
+  //}
+//});
 
-$(function() {
-  // Toggle to hide grid, handy during dev, remove for release.
-  $('.grid-overlay').hide();
-});
+//$(function() {
+  //// Toggle to hide grid, handy during dev, remove for release.
+  //$('.grid-overlay').hide();
+//});
