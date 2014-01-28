@@ -22,7 +22,11 @@
 //
 //= require lib/jquery.easing
 
-app = angular.module("app", ["templates"])
+try {
+  angular.module("app"); // Check for app module.
+} catch(err) {
+  angular.module("app", ["templates"]); // Otherwise create it.
+}
 
 $(document).keypress(function(event) {
   // Map t to toggle grid.
