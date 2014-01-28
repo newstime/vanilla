@@ -37,14 +37,28 @@
   fill: #484c55;
 }
 
+
+.sfrecord-logo {
+  width: 775px;
+  height: 82px;
+}
+
 .mini-mast {
+  width: 1184px;
+  position: relative;
+  margin: 0 auto;
+
   .sfrecord-logo {
     height: 50px;
     margin: 0;
+    width: 100px;
   }
   svg {
-    height: 30px;
-    margin-top: 10px;
+    /*height: 30px;*/
+    /*margin-top: 10px;*/
+    display: block;
+    width: 300px;
+    margin: 1px 427px
   }
 }
 

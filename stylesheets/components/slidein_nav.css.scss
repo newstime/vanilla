@@ -8,11 +8,17 @@
   width: 100%;
   background-color: $body-bg-color;
   border-bottom: 1px solid $line-color;
-  width: $cols24;
+
   h1 {
+    /*margin: 0;*/
+    /*line-height: 1.5em;*/
+    /*text-align: center;*/
+    /*font-size: 24pt;*/
+
+
     margin: 0;
     line-height: 1.5em;
-    text-align: center;
+    text-align: left;
     font-size: 24pt;
   }
 }
