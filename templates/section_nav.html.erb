@@ -5,7 +5,9 @@
       <% edition.sections.each do |section| %>
         <span><%= link_to section.name, section.path %></span>
       <% end %>
-      <div class="add-section">&#10010;</div>
+      <% if composing? %>
+        <div class="add-section">&#10010;</div>
+      <% end %>
     </div>
   </div>
 </div>
