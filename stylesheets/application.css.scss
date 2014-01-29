@@ -46,6 +46,20 @@
   text-align: center;
   top: 6px;
   width: 18px;
+  text-shadow: 1px 1px 1px #ccc;
+
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+
+  &:hover {
+    text-shadow: 1px 1px 1px #bbb;
+  }
+  &:active {
+    text-shadow: none;
+  }
+
 }
 
 .sfrecord-logo {
