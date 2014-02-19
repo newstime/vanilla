@@ -1,11 +1,20 @@
 <div class="broadsheet" style="height: <%= page.pixel_height %>px">
   <%= render 'page_header', page: page %>
 
-  <% page.content_regions.each_with_index do |content_region, i| %>
-    <%= render 'content_region', content_region: content_region %>
+  <% grid_composition.rows.each do |row| %>
+    <div class="row">
+      <% row.content_regions.each do |content_region| %>
+        <%= render 'content_region', content_region: content_region %>
+      <% end -%>
+      <% if composing? && row.more_room? %>
+        <div class="col span<%= row.columns_width_remaining %>">
+          <input class="add-content-btn" type="button" value="Add Content Region" data-page-number="<%= page.number %>" data-page-id="<%= page.id %>"></input>
+        </div>
+      <% end -%>
+    </div>
   <% end -%>
 
-  <% if composing? %>
+  <% if composing? && grid_composition.more_room? %>
     <div class="row">
       <div class="col span24">
         <input class="add-content-btn" type="button" value="Add Content Region" data-page-number="<%= page.number %>" data-page-id="<%= page.id %>"></input>
