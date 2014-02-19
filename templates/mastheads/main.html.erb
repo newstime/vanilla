@@ -14,7 +14,7 @@
       <div class="masthead-foot">
         <p class="volume pull-left"><%= edition.volume_label %></p>
         <p class="price pull-right"><%= edition.fmt_price %></p>
-        <p class="publish-date"><%= edition.publish_date.strftime("%A, %B %d, %Y") %></p>
+        <p class="publish-date"><%= edition.try(:publish_date).try(:strftime, "%A, %B %d, %Y") %></p>
       </div>
     </div>
 
