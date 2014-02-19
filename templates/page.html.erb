@@ -8,7 +8,7 @@
       <% end -%>
       <% if composing? && row.more_room? %>
         <div class="col span<%= row.columns_width_remaining %>">
-          <input class="add-content-btn" type="button" value="Add Content Region" data-page-number="<%= page.number %>" data-page-id="<%= page.id %>"></input>
+          <input class="add-content-btn" type="button" value="Add Content Region" data-page-number="<%= page.number %>" data-page-id="<%= page.id %>" data-row-sequence="<%= row.sequence %>"></input>
         </div>
       <% end -%>
     </div>
@@ -17,7 +17,7 @@
   <% if composing? && grid_composition.more_room? %>
     <div class="row">
       <div class="col span24">
-        <input class="add-content-btn" type="button" value="Add Content Region" data-page-number="<%= page.number %>" data-page-id="<%= page.id %>"></input>
+        <input class="add-content-btn" type="button" value="Add Content Region" data-page-number="<%= page.number %>" data-page-id="<%= page.id %>" data-row-sequence="<%= grid_composition.next_row_sequence %>"></input>
       </div>
     </div>
 <% end -%>
