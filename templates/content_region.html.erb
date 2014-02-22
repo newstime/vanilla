@@ -1,5 +1,5 @@
 <div class="col span<%= content_region.column_width %>" style="height: <%= content_region.pixel_height %>px; overflow: hidden;">
-  <%#Content goes here%>
+  <%= render_content_items content_region %>
   <% if composing? %>
     <input class="add-content-btn" type="button" value="Add Content" data-content-region-id="<%= content_region.id %>"></input>
   <% end -%>
