@@ -2,7 +2,7 @@
 <!-- Section Nav -->
 <div class="row">
   <div class="col">
-    <div class="sections-nav text-center">
+    <div id="section-nav" class="sections-nav text-center">
       <% edition.sections.each do |section| %>
         <span><%= link_to section.name, section.path %></span>
       <% end %>
