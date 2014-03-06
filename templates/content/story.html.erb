@@ -1,2 +1,4 @@
+<div <%= "story-text-control data-story-text-id=#{id}" if composing? %>>
 <span class="by-line">By <strong><%= story.author %></strong></span>
 <%= flow_story story.name, story %>
+</div>
