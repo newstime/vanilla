@@ -2,9 +2,5 @@
 <% if false # Disabled temporarily %>
   <span class="by-line">By <strong><%= story.author %></strong></span>
 <% end %>
-<% columns.times do |i| %>
-  <div class="text-column" style="width: <%= text_column_width %>px;">
-    <%= flow_story story.name, story, width: text_column_width, height: height %>
-  </div>
-<% end %>
+<%= flow_story story.name, story, width: text_column_width, height: height, columns: columns %>
 </div>
