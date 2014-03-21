@@ -1,6 +1,3 @@
 <div <%= "story-text-control data-story-text-id=#{id}" if composing? %>>
-<% if false # Disabled temporarily %>
-  <span class="by-line">By <strong><%= story.author %></strong></span>
-<% end %>
-<%= flow_story story.name, story, width: text_column_width, height: height, columns: columns %>
+  <%= rendered_html %>
 </div>

@@ -1,1 +1,6 @@
-<div class="text-column" style="width: <%= width %>px;"><%= content %></div>
+<div class="text-column" style="width: <%= width %>px;">
+  <% if render_by_line %>
+    <span class="by-line">By <strong><%= story.author %></strong></span>
+  <% end -%>
+  <%= content %>
+</div>
