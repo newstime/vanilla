@@ -2,9 +2,11 @@
   <% if render_by_line %>
     <span class="by-line">By <strong><%= story.author %></strong></span>
   <% end -%>
+  <% if render_precedent_link %>
+    <p class="text-center"><em><a href="<%= precedent_path %>"><%= precedent_text %></a></em></p>
+  <% end -%>
   <%= content %>
-  <% if render_by_continuation %>
+  <% if render_continuation %>
     <p class="text-center"><em><a href="<%= continuation_path %>"><%= continuation_text %></a></em></p>
   <% end -%>
-
 </div>
