@@ -4,7 +4,7 @@
   <% end -%>
   <%= content %>
   <% if render_by_continuation %>
-    <p class="text-center"><em><a href="">Continued on Page B4</a></em></p>
+    <p class="text-center"><em><a href="<%= continuation_path %>"><%= continuation_text %></a></em></p>
   <% end -%>
 
 </div>
