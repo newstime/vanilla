@@ -3,4 +3,8 @@
     <span class="by-line">By <strong><%= story.author %></strong></span>
   <% end -%>
   <%= content %>
+  <% if render_by_continuation %>
+    <p class="text-center"><em><a href="">Continued on Page B4</a></em></p>
+  <% end -%>
+
 </div>
