@@ -1,3 +1,4 @@
-<div id="<%= anchor %>" <%= "story-text-control data-story-text-id=#{id}" if composing? %>>
+<div <%= "story-text-control data-story-text-id=#{id}" if composing? %>>
+  <a class="anchor" id="<%= anchor %>"></a>
   <%= rendered_html %>
 </div>
