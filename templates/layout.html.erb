@@ -4,6 +4,7 @@
 <title><%= title %></title>
   <%= composer_stylesheet if composing? -%>
   <%= stylesheet_link_tag "stylesheets/application" %>
+  <meta charset="utf-8">
 </head>
 <body ng-app="app">
   <%= content_for :toolbar if composing? %>
