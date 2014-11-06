@@ -1,24 +1,8 @@
-<div class="broadsheet" style="height: <%= page.pixel_height %>px">
+<div class="broadsheet" <%= "page-compose data-page-id=#{page.id}" if composing? %> style="height: <%= page.pixel_height %>px">
   <%= render 'page_header', page: page %>
 
-  <% grid_composition.rows.each do |row| %>
-    <div class="row">
-      <% row.content_regions.each do |content_region| %>
-        <%= render 'content_region', content_region: content_region %>
-      <% end -%>
-      <% if composing? && row.more_room? %>
-        <div class="col span<%= row.columns_width_remaining %>">
-          <input class="add-content-region-btn" type="button" value="Add Content Region" data-page-number="<%= page.number %>" data-page-id="<%= page.id %>" data-row-sequence="<%= row.sequence %>"></input>
-        </div>
-      <% end -%>
-    </div>
+  <% page.content_items.each do |content_item| %>
+    <%= render_content_item content_item %>
   <% end -%>
 
-  <% if composing? && grid_composition.more_room? %>
-    <div class="row">
-      <div class="col span24">
-        <input class="add-content-region-btn" type="button" value="Add Content Region" data-page-number="<%= page.number %>" data-page-id="<%= page.id %>" data-row-sequence="<%= grid_composition.next_row_sequence %>"></input>
-      </div>
-    </div>
-<% end -%>
 </div>

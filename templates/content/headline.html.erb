@@ -1,1 +1,1 @@
-<h1 <%= "headline-control data-headline-id=#{id}" if composing? %> style="<%= style %>" class="headline"><%= text %></h1>
+<h1 <%= "headline-control data-content-item-id=#{id}" if composing? %> style="<%= style %> <%= "height: #{height}px; width: #{width}px; top: #{top}px; left: #{left}px; position: absolute;" %>" class="headline"><%= text %></h1>
