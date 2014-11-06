@@ -2,6 +2,8 @@
 @import 'grid/config';
 
 .broadsheet {
+  position: relative;
+
   .page-header {
     margin-top: 0;
     border-bottom: 1px solid #cbcbcb;
