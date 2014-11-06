@@ -96,7 +96,9 @@ h1, h2, h3, h4, h5, h6,
     /*margin-top: 10px;*/
     display: block;
     width: 300px;
-    margin: 1px 427px
+    margin: 1px 427px;
+    position: relative;
+    top: 10px;
   }
 }
 
