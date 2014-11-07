@@ -1,1 +1,4 @@
-<video-feature src="<%= video_url %>" thumbnail="<%= video_thumbnail %>"></video-feature>
+<video-feature
+  <%= "video-control data-content-item-id=#{id}" if composing? %>
+  style="<%= "top: #{top}px; left: #{left}px; position: absolute;" %>"
+  src="<%= video_url %>" thumbnail="<%= video_thumbnail %>"></video-feature>
