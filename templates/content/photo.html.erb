@@ -1,2 +1,4 @@
-<img <%= "photo-control data-photo-id=#{id}" if composing? %>
-  src="<%= photo_url %>" height="<%= photo_height %>" width="<%= photo_width %>"></img>
+<img <%= "photo-control data-content-item-id=#{id}" if composing? %>
+  class="photo"
+  style="<%= "top: #{top}px; left: #{left}px; position: absolute; background-image: url('#{photo_url}');" %> "
+  height="<%= photo_height %>" width="<%= photo_width %>"></img>
