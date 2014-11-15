@@ -1,4 +1,4 @@
-<div class="broadsheet" <%= "page-compose data-page-id=#{page.id}" if composing? %> style="height: <%= page.pixel_height %>px">
+<div class="broadsheet-page" <%= "page-compose data-page-id=#{page.id}" if composing? %> style="height: <%= page.pixel_height %>px">
   <%= render 'page_header', page: page %>
 
   <% page.content_items.each do |content_item| %>

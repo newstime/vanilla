@@ -4,35 +4,17 @@
 .broadsheet {
   position: relative;
 
+  .broadsheet-page {
+    position: relative;
+  }
+
   .page-header {
     margin-top: 0;
     border-bottom: 1px solid #cbcbcb;
     background-color: #e8e8e8;
     padding: 5px 10px;
     position: relative;
-    z-index: 2;
     border-top: 1px solid $line-color;
-  }
-
-  p {
-    word-spacing: -1px;
-    margin: 0;
-  }
-
-
-  /* Trick to fully justify the last line. */
-  p.broken {
-    &:after {
-      content: " __________________________________________________________";
-      line-height: 0;
-      font-size: 1px;
-      visibility: hidden;
-      font-family: serif;
-      width: 100%;
-      display: inline-block;
-    }
-
-    margin-bottom: -22px; // Offset extra space added from hidden after content.
   }
 
   &:after {
@@ -53,9 +35,6 @@
     /*height: 34px;*/
   }
 
-}
-
-.broadsheet {
   text-align: justify;
 
   h4 {
@@ -73,8 +52,6 @@
     font-weight: 600;
     font-family: 'EB Garamond', serif;
   }
-
-
 
   .cascade {
     h3 {
@@ -116,13 +93,6 @@
     line-height: 1.3em;
   }
 
-  p {
-    font-family: "Crimson Text";
-    /*font-family: "Crimson Text", Gentium, "Gentium Basic", "Hoefler Text", Constantia, "Palatino Linotype", Georgia, serif;*/
-    font-size: 16px;
-  }
-
-
   .caption {
     display: block;
     margin: 8pt 0;
@@ -138,9 +108,16 @@
 
 
   p.typeset {
+    font-family: "Crimson Text";
+    font-size: 16px;
+
+    word-spacing: -1px;
+    margin: 0;
+
     word-spacing: -1px;
     text-align: justify;
     text-indent: 40px;
+
     span.line {
       white-space: nowrap;
     }
@@ -148,12 +125,22 @@
     &.continued {
       text-indent: 0;
     }
+
+    /* Trick to fully justify the last line. */
+    &.broken {
+      &:after {
+        content: " __________________________________________________________";
+        line-height: 0;
+        font-size: 1px;
+        visibility: hidden;
+        font-family: serif;
+        width: 100%;
+        display: inline-block;
+      }
+
+      margin-bottom: -22px; // Offset extra space added from hidden after content.
+    }
   }
 
-  img.photo {
-    background-size: cover;
-    background-position: 50%;
-    background-repeat: no-repeat;
-  }
 
 }
