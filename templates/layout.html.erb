@@ -8,7 +8,11 @@
 </head>
 <body ng-app="app">
   <%= content_for :toolbar if composing? %>
-  <%= yield %>
+  <div class="page broadsheet" id="cover" style="top: 0px;">
+    <div class="grid grid24">
+      <%= yield %>
+    </div>
+  </div>
 
   <!-- Mini Mast -->
   <div slidein-nav="true" class="ng-isolate-scope ng-scope slidein-nav" style="display: none; top: -48px;">
