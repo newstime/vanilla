@@ -3,11 +3,10 @@
 <head>
 <title><%= title %></title>
   <%= composer_stylesheet if composing? -%>
-  <%= stylesheet_link_tag "stylesheets/application" %>
+  <%= stylesheet_link_tag "stylesheets/application", media: "all" %>
   <meta charset="utf-8">
 </head>
 <body ng-app="app">
-  <%= content_for :toolbar if composing? %>
   <div class="page broadsheet" id="cover" style="top: 0px;">
     <div class="grid grid24">
       <%= yield %>
