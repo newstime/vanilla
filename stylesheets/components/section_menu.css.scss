@@ -63,7 +63,7 @@
       font-size: 14pt;
       padding: 11px 23px;
       /*@include transition(background-color 1s);*/
-      &:hover {
+      &:hover, &.hover {
         background-color: #eee;
       }
     }

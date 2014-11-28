@@ -2,12 +2,18 @@
 
 // Section nav is along the top, not to be confused with section-menu, which is
 // along the side.
+
+a.hover {
+  text-decoration: underline !important;
+}
+
 .sections-nav {
   list-style: none;
   border-bottom: 1px solid $line-color;
   height: 30px;
   line-height: 30px;
   text-align: center;
+
 
   li {
     float: left;
