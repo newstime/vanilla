@@ -10,6 +10,7 @@ app.directive "slideinNav", [ '$window', '$document', ( $window, $document ) ->
     link: ($scope, $element, $attrs) ->
       $window = $(window)
       showingSlideinNav = false
+      offset =  parseInt($attrs['offset'] || 0)
 
       angular.element($window).bind 'scroll', ->
         scrollTop    = $window.scrollTop()
@@ -19,16 +20,16 @@ app.directive "slideinNav", [ '$window', '$document', ( $window, $document ) ->
           if showingSlideinNav
             # Hide nav
             showingSlideinNav = false
-            $element.animate { top: -$element.height() }, 200, 'easeInOutSine', ->
+            $element.animate { top: -$element.height() + offset }, 200, 'easeInOutSine', ->
               $element.hide()
 
         else if scrollTop >= 800
           unless showingSlideinNav
             # Show nav
             showingSlideinNav = true
-            $element.css top: -$element.height()
+            $element.css top: -$element.height() + offset
             $element.show()
-            $element.animate { top: 0 }, 200, 'easeInOutSine'
+            $element.animate { top: 0 + offset }, 200, 'easeInOutSine'
 
 
   }
