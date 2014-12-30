@@ -1,6 +1,6 @@
 <div class="text-column" style="width: <%= width %>px;">
   <% if render_by_line %>
-    <span class="by-line">By <strong><%= story.author %></strong></span>
+    <span class="by-line">By <strong><%= author %></strong></span>
   <% end -%>
   <% if render_precedent_link %>
     <p class="text-center"><em><a href="<%= precedent_path %>"><%= precedent_text %></a></em></p>
