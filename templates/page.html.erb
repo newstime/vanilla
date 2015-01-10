@@ -5,7 +5,11 @@
     <%= render 'page_header', page: page %>
   <% end %>
 
-  <% page.content_items.each do |content_item| %>
+  <% page.groups.each do |group| %>
+    <%= render "content/group", group: group %>
+  <% end -%>
+
+  <% page.content_items.reject(&:group).each do |content_item| %>
     <%= render_content_item content_item %>
   <% end -%>
 

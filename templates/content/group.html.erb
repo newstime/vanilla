@@ -1,0 +1,12 @@
+<div <%= "data-group-id=#{group.id}" if composing? %>
+  style="<%= "height: #{group.height}px; width: #{group.width}px; position: absolute; top: #{group.top}px; left: #{group.left}px;"%>">
+
+  <% group.content_items.each do |content_item| %>
+    <%= render_content_item content_item %>
+  <% end -%>
+
+  <% group.groups.each do |group| %>
+    <%= render "content/group", group %>
+  <% end -%>
+
+</div>
