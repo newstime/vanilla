@@ -250,6 +250,11 @@ a.anchor{
   display: block;
   position: relative;
   top: -2px;
-  /*top: -50px;  Needs to be enabled only when mini-mast is displayed. */
   visibility: hidden;
+}
+
+body.mini-mast-showing {
+  a.anchor {
+    top: -51px;
+  }
 }

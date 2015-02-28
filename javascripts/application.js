@@ -46,5 +46,5 @@ try {
 $(function() {
   var hash;
   hash = window.location.hash.substring(1);
-  $(".anchor-" + hash).addClass('anchor-highlight');
+  $(".anchor-" + hash.replace('/', '-')).addClass('anchor-highlight');
 })

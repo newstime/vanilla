@@ -23,6 +23,8 @@ app.directive "slideinNav", [ '$window', '$document', ( $window, $document ) ->
             $element.animate { top: -$element.height() + offset }, 200, 'easeInOutSine', ->
               $element.hide()
 
+            $('body').removeClass 'mini-mast-showing'
+
         else if scrollTop >= 800
           unless showingSlideinNav
             # Show nav
@@ -30,6 +32,8 @@ app.directive "slideinNav", [ '$window', '$document', ( $window, $document ) ->
             $element.css top: -$element.height() + offset
             $element.show()
             $element.animate { top: 0 + offset }, 200, 'easeInOutSine'
+
+            $('body').addClass 'mini-mast-showing'
 
 
   }
