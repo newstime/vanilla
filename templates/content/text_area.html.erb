@@ -1,5 +1,6 @@
 <div <%= "text-area-control data-content-item-id=#{id}" if composing? %>
-  style="<%= "height: #{height}px; width: #{width}px; top: #{top}px; left: #{left}px; position: absolute;" %>">
+  style="<%= "height: #{height}px; width: #{width}px; top: #{top}px; left: #{left}px; position: absolute;" %>"
+  class="<%= "anchor-#{anchor}" if anchor %>">
   <a class="anchor" id="<%= anchor %>"></a>
   <%= rendered_html %>
 </div>

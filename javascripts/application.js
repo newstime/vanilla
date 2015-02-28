@@ -41,3 +41,10 @@ try {
   //// Toggle to hide grid, handy during dev, remove for release.
   //$('.grid-overlay').hide();
 //});
+
+
+$(function() {
+  var hash;
+  hash = window.location.hash.substring(1);
+  $(".anchor-" + hash).addClass('anchor-highlight');
+})

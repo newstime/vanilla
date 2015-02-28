@@ -146,3 +146,23 @@ p.typeset {
 .group-left-border {
   border-left: 1px solid #bbb;
 }
+
+.anchor-highlight {
+  -webkit-animation: flash-anchor-highlight 1.5s;
+}
+
+@-webkit-keyframes flash-anchor-highlight{
+  from {
+    background-color: #f6f1ba;
+    /*background-color: #e4e578;*/
+    /*background-color: #bd78e5;*/
+    /*background-color: white;*/
+
+  }
+
+  to {
+    /*background-color: #f6f1ba;*/
+    background-color: none;
+  }
+
+}
