@@ -1,5 +1,6 @@
 <div <%= "data-group-id=#{group.id}" if composing? %>
-  style="<%= "height: #{group.height}px; width: #{group.width}px; position: absolute; top: #{group.top}px; left: #{group.left}px;"%>">
+  style="<%= "height: #{group.height}px; width: #{group.width}px; position: absolute; top: #{group.top}px; left: #{group.left}px;"%>"
+  class="<%= "group-left-border" if group.left_border %>">
 
   <% group.content_items.each do |content_item| %>
     <%= render_content_item content_item %>
