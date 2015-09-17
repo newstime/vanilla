@@ -9,25 +9,6 @@
   background-color: $body-bg-color;
   position: relative;
 
-  .news-fit-to-sign {
-    position: absolute;
-    top: 12px;
-    width: 170px;
-    padding: 10px;
-    border: 1px solid $line-color;
-  }
-
-  .buy-or-subscribe {
-    position: absolute;
-    top: 12px; right: 0;
-    width: 170px;
-    padding: 10px;
-    border: 1px solid $line-color;
-    em {
-      font-style: normal;
-      font-size: .9em;
-    }
-  }
 
   h1 {
     line-height: 1em;
@@ -39,6 +20,7 @@
     margin: -27px auto 5px;
     display: block;
     width: 140px;
+    height: 20px;
   }
 
   .sfrecord-logo {
