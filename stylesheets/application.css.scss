@@ -259,3 +259,17 @@ body.mini-mast-showing {
     top: -51px;
   }
 }
+
+
+.add-page-btn {
+  background: #f2f2d6;
+  color: #484c55;
+
+  &:hover, &.hovered {
+    background: #e3e3ca;
+  }
+
+  &:active {
+    background: #e1e1be;
+  }
+}
