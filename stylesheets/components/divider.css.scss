@@ -1,44 +1,8 @@
 @import 'variables';
 
 hr.divider {
-
   padding: 0;
   margin: 0;
-
-  &.horizontal {
-    border-top: 1px solid $line-color;
-  }
-
-  &.vertical {
-    display: inline-block;
-    width: 1px !important;
-    border-left: 1px solid $line-color;
-  }
-
-  &.short-hr {
-    margin-left: 50pt;
-    margin-right: 50pt;
-    width: auto;
-  }
-
-  &.news-column-right-border {
-    border-right: 1px solid $line-color;
-    padding-right: 7px;
-    margin-right: -8px;
-  }
-
-  &.news-column-left-border {
-    border-left: 1px solid $line-color;
-    /*padding-left: 7px;*/
-    /*margin-left: -8px;*/
-    padding-left: 15px;
-  }
-
-  &.news-column-double-rule {
-    border-top: 3px solid $line-color;
-    height: 3px;
-    border-bottom: 1px solid $line-color;
-  }
-
-
+  border: 0 solid $line-color;
+  display: inline-block;
 }
